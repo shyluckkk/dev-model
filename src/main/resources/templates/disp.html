@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Employee Details</h1>
+    </div>
+
+    <form action="#" th:action="@{/emp}" method="post">
+        <label for="emp-id">Employee ID:</label><br>
+        <input type="number" id="empid" name="empid" required><br>
+        <input type="submit" value="Get Details">
+    </form>
+
+
+    <div>
+        <h1>Details</h1>
+        <p th:number="${empid}"></p>
+        <p th:text="${name}"></p>
+        <p th:text="${email}"></p>
+        <p th:text="${phno}"></p>
+    </div>
+</body>
+</html>
+
